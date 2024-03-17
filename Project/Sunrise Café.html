@@ -1,111 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sunrise Café</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .login {
-            margin-left: auto;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
 
-<header>
-    <h1>Sunrise Café</h1>
-</header>
+    <header>
+        <div class="logo">
+            <a href="#">Sunrise <span>Café</span></a>
+        </div>
 
-<nav>
-    <div>
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>Sunrise Café</h2>
+        <p>Would you like to start the day with a nice coffee?</p>
     </div>
-    <div class="login">
-        <a href="#signin">Sign In</a>
-        <a href="#login">Login</a>
+    <div class="menu" id="menu">
+        <div class="menu-header">
+            <h3>Menu</h3>
+            <h4>Sunrise Café Menu</h4>
+        </div>
+        <div class="menu-content">
+            <div class="hot-coffees">
+                <div class="hot-coffees-image">
+                    <img src="hot-coffees.jpg" alt="">
+                </div>
+                <div class="hot-coffees-body">
+                    <h2>Hot Coffees</h2>
+                    <label>"Indulge in our comforting selection of hot coffees, meticulously crafted to warm your soul with each sip. From rich and robust blends to velvety smooth lattes, our hot coffees promise to awaken your senses and embrace you in a comforting embrace of warmth and flavor."</label>
+                </div>
+            </div>
+            <div class="cold-coffees">
+                <div class="cold-coffees-image">
+                    <img src="cold-coffees.jpg" alt="">
+                </div>
+                <div class="cold-coffees-body">
+                    <h2>Cold Coffees</h2>
+                    <label>"Escape the heat with our refreshing array of cold coffees, each sip a cool breeze on a scorching day. Dive into a world of icy delights, where smooth brews dance with creamy textures, and every sip is an invigorating journey to chill bliss. Embrace the cool side of coffee with our irresistible cold brews and frosty concoctions."</label>
+                </div>
+            </div>
+            <div class="frappucino-coffees">
+                <div class="frappucino-coffees-image">
+                    <img src="frappuccino.jpg" alt="">
+                </div>
+                <div class="frappucino-coffees-body">
+                    <h2>Frappucino Coffees</h2>
+                    <label>"Escape into bliss with our Frappuccino coffees—a heavenly blend of creamy indulgence and irresistible sweetness. Each sip is a delightful journey of flavor, crafted to perfection and topped with a cloud of whipped cream. Dive into a world of decadence and refreshment with our Frappuccinos."</label>
+                </div>
+            </div>
+        </div>
     </div>
-</nav>
-
-<main>
-    <section id="home">
-        <h2>Welcome to Sunrise Café</h2>
-        <p>Experience the best coffee and pastries in town!</p>
-    </section>
-
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <ul>
-            <li>Espresso</li>
-            <li>Cappuccino</li>
-            <li>Latte</li>
-            <li>Americano</li>
-            <li>Mocha</li>
-            <li>Hot Chocolate</li>
-            <li>Assorted Pastries</li>
-        </ul>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Sunrise Café is a cozy coffee shop located in the Otoka. We are passionate about serving the finest coffee and delicious pastries to our customers. Our friendly staff and relaxing atmosphere make us the perfect spot to start your day or unwind after a busy one.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Visit us at:</p>
-        <p>Bulevar Meše Selimovića, Sarajevo</p>
-    <p>For inquiries, call: 061-443-541</p>
-
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2024 Sunrise Café. All rights reserved.</p>
-</footer>
 
 </body>
+
 </html>
