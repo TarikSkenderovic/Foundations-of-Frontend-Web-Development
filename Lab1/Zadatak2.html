@@ -3,60 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Lab1/style.css">
     <title>Document</title>
-    <style>
-        body {
-            background-color: #85AFD4;
-            font-family: 'Lato', sans-serif;
-            color: white;
-        }
-        h1, h2, h3 {
-            font-weight: bold;
-        }
-        p {
-            font-weight: normal;
-        }
-        a {
-            font-weight: bold;
-        }
-        input[type="text"], input[type="password"] {
-            font-family: 'Lato', sans-serif;
-            border-radius: 20px;
-        }
-        button[type="submit"] {
-            background-color: #E47272;
-            color: white;
-            border-radius: 20px;
-            font-family: 'Lato', sans-serif;
-        }
-    </style>
 </head>
-<body style="background-color: #85AFD4;"></body>
-    <img src="ibu.jpg.png" alt="" width="125px" height="90px" style="margin-left: 900px;">
-    <h2 style="margin-left: 800px;">International Burch University</h2>
-    <h1 style="margin-left: 700px;">Login page</h1>
-    <p style="margin-left: 700px; font-size: 18px;">Welcome.</p>
-    <p style="margin-left: 700px; font-size: 18px; margin-top: -10px;">Please Login</p>
-    <h3 style="margin-left: 700px;">Email</h3>
-    <table style="margin: 0 695px;">
-        <tr>
-          <td>
-            <input type="text" placeholder="Enter your Email" name="email" id="email" required style="width: 515px; height: 35px;">
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3 style="margin-right: 900px;">Password</h3>
-            <input type="password" placeholder="Enter your Password" name="psw" id="psw" required style="width: 515px; height: 35px;">
-          </td>
-        </tr>
-      </table>
-      <p style="margin-left: 800px;">Don't have an account?<a href="register.html">   Register NOW</a></p>
-      <a href="Zadatak2.1.html" target="_blank" style="color: black; text-decoration: none;"><p style="margin-left: 850px; font-size: 16px;">Forgot your password?</p></a>
-      <table style="margin: 0 820px;">
-        <tr>
-          <td>
-            <button type="submit"  id="submitButton" style="margin-left: 1px; width: 200px; height: 40px; margin-top: 20px;"><a href="Zadatak2.2.html" style="text-decoration: none; color: black;">Submit</a></button>
-
+<body>
+    <img src="ibu.jpg.png" alt="" width="120px" height="30px" style="margin-left: 890px;">
+    <h2 style="margin-left: 800px; margin-bottom: 50px;">International Burch University</h2>
+    <h1 style="margin-left: 700px; " >Login page</h1>
+    <p style="margin-left: 700px; font-size: 17px;">Welcome.</p>
+    <p style="margin-left: 700px; font-size: 17px; margin-top: -10px;">Please Login</p>
+    <p style="margin-left: 700px; font-size: 20px; font-weight: bold;">Email</p>
+    <input type="email" id="email" name="email" style="margin-left: 700px; width: 520px; height: 50px; margin-top: -15px; margin-bottom: 20px; font-size: 15px;" placeholder="Enter your email" >
+    <p style="margin-left: 700px; font-size: 20px; font-weight: bold;">Password</p> 
+    <input type="password" id="pwd" name="pwd" minlength="8" style="margin-left: 700px; width: 520px; height: 50px; margin-top: -15px; margin-bottom: 5px; font-size: 15px;"placeholder="Enter your password"><br><br>
+    <p style="margin-left: 820px; font-size: 18px;">Don't have an account? <a href="register.html" target="_blank" style="color: rgb(255, 255, 255); font-weight: bolder; text-decoration: none;">Register now</a></p>
+    <a href="Zadatak2.1.html" target="_blank" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: bolder;"><p style="margin-left: 880px; font-size: 16px;">Forgot your password?</p></a>
+    <a href="Zadatak2.2.html"><input type="submit" value="SUBMIT" style="margin-left: 775px; width: 350px; height: 50px; font-size: 20px; font-weight: bold; background-color: #E47272; border: none; color: white;"></a>
 </body>
 </html>
