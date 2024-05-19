@@ -6,78 +6,108 @@
   <title>TechZone</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contactus.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">TechZone</div>
-      <ul class="nav-options">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <h1></h1>
+    <p>Click the buttons below to see Toastr notifications in action:</p>
+    <button onclick="showSuccessMessage('Operation was successful!')">Show Success</button>
+    <button onclick="showErrorMessage('An error occurred!')">Show Error</button>
+</div>
 
-  <section class="about-us">
-    <div class="about-content">
-      <img src="./pictures/pexels-natri-129208.jpg" alt="About Us Image">
-      <div class="content-right">
-        <p>Welcome to TechZone, your premier destination for all things tech! At TechZone, we're passionate about providing the latest and greatest in technology to our customers, ensuring they stay ahead in this fast-paced digital world.
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": true,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
 
-          Founded in 2010, TechZone has been at the forefront of innovation...
-          </p>
-          <button class="viewmore">View more</button>
-      </div>
+    function showSuccessMessage(message) {
+        toastr.success(message, 'Success');
+    }
 
+    function showErrorMessage(message) {
+        toastr.error(message, 'Error');
+    }
+  </script>
 
-    </div>
-  </section>
-  <h1 class="section-break">Our offers</h1>
-  <section class="our-offers">
-    <div class="offer-card">
-      <img src="./pictures/1.jpg" alt="Product Image">
-      <p>Sleek and Powerful: This laptop combines sleek design with powerful performance, making it perfect for both work and play. With its high-resolution display and lightning-fast processor, you can tackle any task with ease.</p>
-      <button class="purchase-btn">Purchase</button>
-    </div>
-    <div class="offer-card">
-      <img src="./pictures/2.jpg" alt="Product Image">
-      <p>Ultra-Portable: Designed for life on the go, this ultra-portable laptop is lightweight and compact without sacrificing performance. Whether you're traveling for work or leisure, you can take it anywhere and stay productive wherever you are.</p>
-      <button class="purchase-btn">Purchase</button>
-    </div>
-    <div class="offer-card">
-      <img src="./pictures/3.jpg" alt="Product Image">
-      <p>Versatile and Reliable: Built to handle everyday computing tasks with ease, this versatile laptop offers reliable performance and long-lasting battery life. From browsing the web to streaming your favorite movies, it's the perfect companion for all your needs.</p>
-      <button class="purchase-btn">Purchase</button>
-    </div>
-  </section>
-  <h1 class="section-break">customer reviews</h1>
-  <section class="customer-reviews">
-    <div class="review-card">Review 1:  "TechZone exceeded my expectations! Their knowledgeable staff helped me find the perfect laptop for my needs, and their after-sales service was impeccable. Highly recommend!"</div>
-    <div class="review-card">Review 2:  "I've been a loyal customer of TechZone for years, and they never disappoint. Their wide selection of tech products and competitive prices make them my go-to destination for all things tech."</div>
-    <div class="review-card">Review 3:  "TechZone's expertise and customer service are second to none. They guided me through the process of setting up my home office with the latest tech gear, and I couldn't be happier with the results."</div>
-  </section>
-
-  <section class="contact-us">
-    <h1>Contact Us</h1>
-    <p>If you have any questions, suggestions, or feedback, please feel free to contact us using the form below:</p>
-    <form action="#" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2024 TechZone. All Rights Reserved.</p>
-  </footer>
+    <header>
+      <nav class="navbar">
+        <div class="logo">TechZone</div>
+        <ul class="nav-options">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          </ul>
+          </nav>
+          </header>
+          <section class="about-us">
+            <div lass="about-content">
+              <img src="./pictures/pexels-natri-129208.jpg" alt="About Us Image">
+              <div class="content-right">
+                <p>Welcome to TechZone, your premier destination for all things tech! At TechZone, we're passionate about providing the latest and greatest in technology to our customers, ensuring they stay ahead in this fast-paced digital world.
+                  Founded in 2010, TechZone has been at the forefront of innovation...</p>
+                  <button class="viewmore">View more</button>
+                  </div>
+                  
+                  </div>
+                  </section>
+                  <h1 class="section-break">Our offers</h1>
+                  <section class="our-offers">
+                    <div class="offer-card">
+                      <img src="./pictures/1.jpg" alt="Product Image">
+                      <p>Sleek and Powerful: This laptop combines sleek design with powerful performance, making it perfect for both work and play. With its high-resolution display and lightning-fast processor, you can tackle any task with ease.</p>
+                      <button class="purchase-btn">Purchase</button>
+                      </div>
+                      <div class="offer-card">
+                        <img src="./pictures/2.jpg" alt="Product Image">
+                        <p>Ultra-Portable: Designed for life on the go, this ultra-portable laptop is lightweight and compact without sacrificing performance. Whether you're traveling for work or leisure, you can take it anywhere and stay productive wherever you are.</p>
+                        <button class="purchase-btn">Purchase</button>
+                        </div>
+                        <div class="offer-card">
+                          <img src="./pictures/3.jpg" alt="Product Image">
+                          <p>Versatile and Reliable: Built to handle everyday computing tasks with ease, this versatile laptop offers reliable performance and long-lasting battery life. From browsing the web to streaming your favorite movies, it's the perfect companion for all your needs.</p>
+                          <button class="purchase-btn">Purchase</button>
+                          </div>
+                          </section>
+                          <h1 class="section-break">customer reviews</h1>
+                          <section class="customer-reviews">
+                            <div class="review-card">Review 1:  "TechZone exceeded my expectations! Their knowledgeable staff helped me find the perfect laptop for my needs, and their after-sales service was impeccable. Highly recommend!"</div>
+                            <div class="review-card">Review 2:  "I've been a loyal customer of TechZone for years, and they never disappoint. Their wide selection of tech products and competitive prices make them my go-to destination for all things tech."</div>
+                            <div class="review-card">Review 3:  "TechZone's expertise and customer service are second to none. They guided me through the process of setting up my home office with the latest tech gear, and I couldn't be happier with the results."</div>
+                          </section>
+                          <section class="contact-us">
+                            <h1>Contact Us</h1>
+                            <p>If you have any questions, suggestions, or feedback, please feel free to contact us using the form below:</p>
+                            <form action="#" method="POST">
+                              <label for="name">Name:</label>
+                              <input type="text" id="name" name="name" required>
+                              <label for="email">Email:</label>
+                              <input type="email" id="email" name="email" required>
+                              <label for="message">Message:</label>
+                              <textarea id="message" name="message" rows="4" required></textarea>
+                              <button type="submit">Send Message</button>
+                            </form>
+                          </section>
+                          <footer class="footer">
+                            <p>&copy; 2024 TechZone. All Rights Reserved.</p>
+                          </footer>
+          
 </body>
 </html>
