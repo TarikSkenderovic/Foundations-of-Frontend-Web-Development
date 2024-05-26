@@ -7,6 +7,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
+    
+  }
+
+
+  #about-us-image{
+    width: 50%;
   }
 
   .section-break{
@@ -61,6 +68,12 @@ body {
     align-items: center;
   }
   
+  .content-right{
+    color: #000000;
+    float: right;
+    font-size: 1.2rem;
+  }
+
   .about-content img {
     width: 33%;
     margin-right: 20px;
@@ -218,9 +231,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    
+    
+
 }
 
-.container {
+.container-toast {
     padding: 20px;
+    background-color: darkgreen;
+    position: absolute;
+    width: 265px;
+    border-radius: 10px;
+    top: 100px;
+    left: 50px;
+}
+
+#ToastrP{
+  color: black;
+}
+
+.name{
+  width: 90%;
 }
