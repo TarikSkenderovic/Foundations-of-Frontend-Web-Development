@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Monitors</title>
+    <link rel="stylesheet" href="monitor.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TechZone</div>
+            <ul class="nav-options">
+                <li><a href="./Project2.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="price">Price</label>
+                    <input type="range" id="price" name="price" min="100" max="2000" value="2000">
+                    <div class="range-values">
+                        <span id="min-price">100 $</span>
+                        <span id="max-price">2000 $</span>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Screen Size</label>
+                    <ul>
+                        <li><input type="checkbox" class="filter" data-filter-type="size" value="24"> 24"</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="size" value="27"> 27"</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="size" value="32"> 32"</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="size" value="34"> 34"</li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <label>Resolution</label>
+                    <ul>
+                        <li><input type="checkbox" class="filter" data-filter-type="resolution" value="1080p"> 1080p</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="resolution" value="1440p"> 1440p</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="resolution" value="4K"> 4K</li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <label>Refresh Rate</label>
+                    <ul>
+                        <li><input type="checkbox" class="filter" data-filter-type="refresh-rate" value="60Hz"> 60Hz</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="refresh-rate" value="144Hz"> 144Hz</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="refresh-rate" value="240Hz"> 240Hz</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="product" data-price="399" data-size="27" data-resolution="1440p" data-refresh-rate="144Hz">
+                <img src="./pictures/monitor1.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">27" Gaming Monitor, 1440p, 144Hz, 1ms</p>
+                    <p class="product-price">399 $</p>
+                </div>
+                <a class="purchase-monitor" href="./checkout.html">Purchase</a>
+            </div>
+            <div class="product" data-price="599" data-size="32" data-resolution="4K" data-refresh-rate="60Hz">
+                <img src="./pictures/monitor2.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">32" 4K UHD Monitor, 60Hz, HDR</p>
+                    <p class="product-price">599 $</p>
+                </div>
+                <a class="purchase-monitor" href="./checkout.html">Purchase</a>
+            </div>
+            <div class="product" data-price="299" data-size="24" data-resolution="1080p" data-refresh-rate="144Hz">
+                <img src="./pictures/monitor3.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">24" Full HD Monitor, 1080p, 144Hz, 1ms</p>
+                    <p class="product-price">299 $</p>
+                </div>
+                <a class="purchase-monitor" href="./checkout.html">Purchase</a>
+            </div> 
+            <div class="product" data-price="999" data-size="34" data-resolution="4K" data-refresh-rate="144Hz">
+                <img src="./pictures/monitor4.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">34" UltraWide Monitor, 4K, 144Hz, HDR</p>
+                    <p class="product-price">999 $</p>
+                </div>
+                <a class="purchase-monitor" href="./checkout.html">Purchase</a>
+            </div>
+            <div class="product" data-price="499" data-size="27" data-resolution="1440p" data-refresh-rate="240Hz">
+                <img src="./pictures/monitor5.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">27" Gaming Monitor, 1440p, 240Hz, 1ms</p>
+                    <p class="product-price">499 $</p>
+                </div>
+                <a class="purchase-monitor" href="./checkout.html">Purchase</a>
+            </div>
+            <div class="product" data-price="799" data-size="32" data-resolution="4K" data-refresh-rate="144Hz">
+                <img src="./pictures/monitor6.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">32" 4K Gaming Monitor, 144Hz, HDR</p>
+                    <p class="product-price">799 $</p>
+                </div>
+                <a class="purchase-monitor" href="./checkout.html">Purchase</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            var captionText = document.getElementById("caption");
+
+            modal.style.display = "block";
+            modalImg.src = element.src;
+            captionText.innerHTML = element.nextElementSibling.querySelector('.product-title').innerText;
+        }
+
+        function closeModal(a) {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script src="monitor.js"></script>
+</body>
+</html>

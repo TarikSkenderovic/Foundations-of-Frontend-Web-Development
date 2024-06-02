@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    
+}
+
+header {
+    background-color: #121212;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-left: 100px;
+}
+
+.nav-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-options li {
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+
+.nav-options a {
+    text-decoration: none;
+    color: #88c1ff;
+}
+
+.section-break {
+    margin-right: 40px;
+    margin-bottom: 80px;
+    margin-left: 70px;
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.container {
+    display: flex;
+    margin: 2rem;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.filter-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-group ul li {
+    margin-bottom: 0.5rem;
+}
+
+.main-content {
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product {
+    padding: 1rem;
+    border-radius: 5px;
+    width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.product img {
+    width: 70%;
+    cursor: pointer;
+}
+
+.product-details {
+    margin-top: 1rem;
+}
+
+.product-title {
+    font-weight: bold;
+}
+
+.product-price {
+    color: #f00;
+    margin-top: 0.5rem;
+}
+
+.purchase-monitor {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.purchase-monitor:hover {
+    background-color: #555;
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+}

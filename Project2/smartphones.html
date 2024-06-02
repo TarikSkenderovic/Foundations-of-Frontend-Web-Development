@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone Collection</title>
+    <link rel="stylesheet" href="smartphones.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        #popravak{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="popravak" class="navbar">
+          <div class="logo">TechZone</div>
+          <ul class="nav-options">
+            <li><a href="./Project2.html">Home</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./about.html">About us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+  
+          </ul>
+            </nav>
+            </header>
+
+            
+    <section id="phones">
+        <h1>Our Smartphone Collection</h1>
+        <div class="phone-grid">
+            <div class="phone-card" onclick="openPhoneDetails('phone1')">
+                <img src="./pictures/phone1.jpg" alt="Phone 1">
+                <h2>Iphone 15 Pro Max</h2>
+                <p>$1400</p>
+            </div>
+            <div class="phone-card" onclick="openPhoneDetails('phone2')">
+                <img src="./pictures/phone2.jpg" alt="Phone 2">
+                <h2>Iphone 14 Pro Max</h2>
+                <p>$1100</p>
+            </div>
+            <div class="phone-card" onclick="openPhoneDetails('phone3')">
+                <img src="./pictures/phone3.jpg" alt="Phone 3">
+                <h2>Iphone 13 </h2>
+                <p>$600</p>
+            </div>
+            <div class="phone-card" onclick="openPhoneDetails('phone4')">
+                <img src="./pictures/phone4.jpg" alt="Phone 4">
+                <h2>Samsung Galaxy S20</h2>
+                <p>$450</p>
+            </div>
+            <div class="phone-card" onclick="openPhoneDetails('phone5')">
+                <img src="./pictures/phone5.jpg" alt="Phone 5">
+                <h2>Samsung Galaxy S24 Ultra</h2>
+                <p>$1700</p>
+            </div>
+            <div class="phone-card" onclick="openPhoneDetails('phone6')">
+                <img src="./pictures/phone6.jpg" alt="Phone 6">
+                <h2>Samsung Galaxy S24</h2>
+                <p>$870</p>
+            </div>
+            <div class="phone-card" onclick="openPhoneDetails('phone7')">
+                <img src="./pictures/phone7.jpg" alt="Phone 7">
+                <h2>Samsung Galaxy S22</h2>
+                <p>$1000</p>
+            </div>    <div class="phone-card" onclick="openPhoneDetails('phone8')">
+                <img src="./pictures/phone8.jpg" alt="Phone 8">
+                <h2>Samsung Galaxy S23 Ultra</h2>
+                <p>$1500</p>
+            </div>    <div class="phone-card" onclick="openPhoneDetails('phone9')">
+                <img src="./pictures/phone9.jpg" alt="Phone 9">
+                <h2>Google Pixel 6</h2>
+                <p>$300</p>
+            </div>    <div class="phone-card" onclick="openPhoneDetails('phone10')">
+                <img src="./pictures/phone10.jpg" alt="Phone 10">
+                <h2>Google Pixel 7 Pro</h2>
+                <p>$999</p>
+            </div>
+            <div class="phone-card" onclick="openPhoneDetails('phone11')">
+                <img src="./pictures/phone11.jpg" alt="Phone 11">
+                <h2>Google Pixel 8 Pro</h2>
+                <p>$1100</p>
+            </div>    <div class="phone-card" onclick="openPhoneDetails('phone12')">
+                <img src="./pictures/phone12.jpg" alt="Phone 12">
+                <h2>Xiaomi Redmi Note 11 Pro</h2>
+                <p>$320</p>
+            </div>    <div class="phone-card" onclick="openPhoneDetails('phone13')">
+                <img src="./pictures/phone13.jpg" alt="Phone 13">
+                <h2>Xiaomi Redmi Note 12 Pro</h2>
+                <p>$400</p>
+            </div>    <div class="phone-card" onclick="openPhoneDetails('phone14')">
+                <img src="./pictures/phone14.jpg" alt="Phone 14">
+                <h2>Xiaomi Redmi Note 13 Pro</h2>
+                <p>$650</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="phone-details" class="hidden">
+        <div class="details-container">
+            <button onclick="closePhoneDetails()">Close</button>
+            <div class="details-content">
+                <img id="details-image" src="" alt="Phone Image">
+                <h2 id="details-title"></h2>
+                <p id="details-description"></p>
+                <p id="details-price"></p>
+                <a id="details-buy" href="#" class="cta">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 TechZone. All Rights Reserved.</p>
+      </footer>
+
+    <script src="smartphones.js"></script>
+</body>
+</html>

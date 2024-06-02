@@ -4,95 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechZone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./loading.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  crossorigin="anonymous" />
 </head>
-<body>
-  <div class="container-toast">
+<body style="position: relative;">
+ 
+  <header>
+      <nav class="navbar">
+        <div style="user-select: none; cursor: pointer;" class="logo" onclick="showSuccessMessage('Operation was successful!')">TechZone</div>
+        <ul class="nav-options">
+          <li><a href="#">Home</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./about.html">About us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./edit.html">Edit</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <div class="loading-screen">
+    <div class="innerloading">
+      <div class="loader"></div>
+      <div class="loadingText">Please wait while the page is loading...</div>
+    </div>
+  </div>
+
+  <div style="display: none;" class="container-toast">
     <h1></h1>
     <p id="ToastrP">Click the buttons below to see Toastr notifications in action:</p>
     <button onclick="showSuccessMessage('Operation was successful!')">Show Success</button>
     <button onclick="showErrorMessage('An error occurred!')">Show Error</button>
-</div>
+  </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script>
-    toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "newestOnTop": true,
-        "progressBar": true,
-        "positionClass": "toast-top-right",
-        "preventDuplicates": true,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "5000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    };
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script>
+      toastr.options = {
+          "closeButton": true,
+          "debug": false,
+          "newestOnTop": true,
+          "progressBar": true,
+          "positionClass": "toast-top-right",
+          "preventDuplicates": true,
+          "onclick": null,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": "5000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+      };
 
-    function showSuccessMessage(message) {
-        toastr.success(message, 'Success');
-    }
+      function showSuccessMessage(message) {
+          toastr.success(message, 'Success');
+      }
 
-    function showErrorMessage(message) {
-        toastr.error(message, 'Error');
-    }
+      function showErrorMessage(message) {
+          toastr.error(message, 'Error');
+      }
   </script>
 
-    <header>
-      <nav class="navbar">
-        <div class="logo">TechZone</div>
-        <ul class="nav-options">
-          <li><a href="#">Home</a></li>
-          <li><a href="./products.html">Products</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          </ul>
-          </nav>
-          </header>
-          <section class="about-us">
-            <div class="about-content">
-              <img src="./pictures/pexels-natri-129208.jpg" id="about-us-image" alt="About Us Image">
-              <div class="content-right">
-                <p>Welcome to TechZone, your premier destination for all things tech! At TechZone, we're passionate about providing the latest and greatest in technology to our customers, ensuring they stay ahead in this fast-paced digital world.
-                  Founded in 2010, TechZone has been at the forefront of innovation...</p>
-                  <button class="viewmore">View more</button>
-                  </div>
-                  
-                  </div>
-                  </section>
-                  <h1 class="section-break">Our offers</h1>
-                  <section class="our-offers">
-                    <div class="offer-card">
-                      <img src="./pictures/1.jpg" alt="Product Image">
-                      <p>Sleek and Powerful: This laptop combines sleek design with powerful performance, making it perfect for both work and play. With its high-resolution display and lightning-fast processor, you can tackle any task with ease.</p>
-                      <a class="purchase-btn" href="./checkout.html">Purchase</a> </button>                  </div>
-                      <div class="offer-card">
-                        <img src="./pictures/2.jpg" alt="Product Image">
-                        <p>An absolute gaming beast, capable of running any  modern game or piece of software. A must have for pc lovers.</p>
-                        <a class="purchase-btn" href="./checkout.html">Purchase</a> </button>                       </div>
-                        <div class="offer-card">
-                          <img src="./pictures/3.jpg" alt="Product Image">
-                          <p>Versatile and Reliable: Built to handle everyday computing tasks with ease, this versatile laptop offers reliable performance and long-lasting battery life. From browsing the web to streaming your favorite movies, it's the perfect companion for all your needs.</p>
-                          <a class="purchase-btn" href="./checkout.html">Purchase</a> </button>
-                        </div>
-                          </section>
-                          <h1 class="section-break">customer reviews</h1>
-                          <section class="customer-reviews">
-                            <div class="review-card">Review 1:  "TechZone exceeded my expectations! Their knowledgeable staff helped me find the perfect laptop for my needs, and their after-sales service was impeccable. Highly recommend!"</div>
-                            <div class="review-card">Review 2:  "I've been a loyal customer of TechZone for years, and they never disappoint. Their wide selection of tech products and competitive prices make them my go-to destination for all things tech."</div>
-                            <div class="review-card">Review 3:  "TechZone's expertise and customer service are second to none. They guided me through the process of setting up my home office with the latest tech gear, and I couldn't be happier with the results."</div>
-                          </section>
+  <section class="about-us">
+    <div class="about-content">
+      <img src="./pictures/pexels-natri-129208.jpg" id="about-us-image" alt="About Us Image">
+      <div class="content-right">
+        <p>Welcome to TechZone, your premier destination for all things tech! At TechZone, we're passionate about providing the latest and greatest in technology to our customers, ensuring they stay ahead in this fast-paced digital world.
+          Founded in 2010, TechZone has been at the forefront of innovation...</p>
+        <button class="viewmore"><a style="color: white;" href="./about.html">view more</a></button>
+      </div>
+    </div>
+  </section>
 
-                          <footer class="footer">
-                            <p>&copy; 2024 TechZone. All Rights Reserved.</p>
-                          </footer>
-          
+  <h1 class="section-break">Our offers</h1>
+  <section class="our-offers">
+    <div class="offer-card">
+      <img src="./pictures/1.jpg" alt="Product Image">
+      <h2 class="naslov">PHONES</h2>
+      <a class="purchase-btn" href="./smartphones.html">CHECK OUT</a>
+    </div>
+    <div class="offer-card">
+      <img src="./pictures/2.jpg" alt="Product Image">
+      <h2 class="naslov">GAMING PCs</h2>
+      <a class="purchase-btn" href="./gamingpc.html">CHECK OUT</a>
+    </div>
+    <div class="offer-card">
+      <img src="./pictures/3.jpg" alt="Product Image">
+      <h2 class="naslov">LAPTOPS</h2>
+      <a class="purchase-btn" href="./laptop.html">CHECK OUT</a>
+    </div>
+    <div class="offer-card">
+      <img src="./pictures/4.jpg" alt="Product Image">
+      <h2 class="naslov">MONITORS</h2>
+      <a class="purchase-btn" href="./monitor.html">CHECK OUT</a>
+    </div>
+  </section>
+
+  <h1 class="section-break">customer reviews</h1>
+  <section class="customer-reviews">
+    <div class="review-card">Review 1:  "TechZone exceeded my expectations! Their knowledgeable staff helped me find the perfect laptop for my needs, and their after-sales service was impeccable. Highly recommend!"</div>
+    <div class="review-card">Review 2:  "I've been a loyal customer of TechZone for years, and they never disappoint. Their wide selection of tech products and competitive prices make them my go-to destination for all things tech."</div>
+    <div class="review-card">Review 3:  "TechZone's expertise and customer service are second to none. They guided me through the process of setting up my home office with the latest tech gear, and I couldn't be happier with the results."</div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 TechZone. All Rights Reserved.</p>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>

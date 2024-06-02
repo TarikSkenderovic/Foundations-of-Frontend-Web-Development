@@ -59,6 +59,8 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
+
+
 .checkout-btn:hover {
     background-color: #004b99; /* Darker Blue */
 }

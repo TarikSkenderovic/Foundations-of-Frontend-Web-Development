@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming PCs</title>
+    <link rel="stylesheet" href="laptop.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TechZone</div>
+            <ul class="nav-options">
+                <li><a href="./Project2.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="price">Cijena</label>
+                    <input type="range" id="price" name="price" min="800" max="8000" value="8000">
+                    <div class="range-values">
+                        <span id="min-price">800 $</span>
+                        <span id="max-price">8000 $</span>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Processor</label>
+                    <ul>
+                        <li><input type="checkbox" class="filter" data-filter-type="processor" value="AMD"> AMD</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="processor" value="Intel"> Intel</li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <label>RAM Memorija</label>
+                    <ul>
+                        <li><input type="checkbox" class="filter" data-filter-type="ram" value="8GB"> 8GB</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="ram" value="12GB"> 12GB</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="ram" value="16GB"> 16GB</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="ram" value="32GB"> 32GB</li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <label>Graficka Kartica</label>
+                    <ul>
+                        <li><input type="checkbox" class="filter" data-filter-type="graphics" value="AMD"> AMD</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="graphics" value="NVIDIA"> NVIDIA</li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <label>Vrsta Diska</label>
+                    <ul>
+                        <li><input type="checkbox" class="filter" data-filter-type="disk" value="SSD"> SSD</li>
+                        <li><input type="checkbox" class="filter" data-filter-type="disk" value="SSD M.2"> SSD M.2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="product" data-price="349" data-processor="AMD" data-ram="16GB" data-graphics="NVIDIA" data-disk="SSD">
+                <img src="./pictures/laptop1.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">Gaming Laptop NVIDIA GeForce RTX 3080, AMD Ryzen 9 5900HX, 16GB DDR4, 1TB SSD</p>
+                    <p class="product-price">2,500 $</p>
+                </div>
+                <a class="purchase-pc" href="./checkout.html">Purchase</a>
+            </div>
+            <div class="product" data-price="619" data-processor="Intel" data-ram="12GB" data-graphics="NVIDIA" data-disk="SSD">
+                <img src="./pictures/laptop2.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">Gaming Laptop,  Intel® Core™ i7-13650HX, 12GB RAM, 512GB SSD</p>
+                    <p class="product-price">1,000 $</p>
+                </div>
+                <a class="purchase-pc" href="./checkout.html">Purchase</a>
+            </div>
+            <div class="product" data-price="619" data-processor="Intel" data-ram="16GB" data-graphics="NVIDIA" data-disk="SSD">
+                <img src="./pictures/laptop3.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">Gaming Laptop, Intel® Core i7-7700HQ, 16GB RAM, GeForce GTX 1070 8GB, 1TB SSD</p>
+                    <p class="product-price"> 1,600$</p>
+                </div>
+                <a class="purchase-pc" href="./checkout.html">Purchase</a>
+            </div> 
+            <div class="product" data-price="619" data-processor="Intel" data-ram="32GB" data-graphics="NVIDIA" data-disk="SSD M.2">
+                <img src="./pictures/laptop4.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">Gaming Laptop Intel® Core™ i7-12700H , 32GB RAM, NVIDIA® GeForce RTX™ 3070Ti, 1TB SSD</p>
+                    <p class="product-price">2,999 $</p>
+                </div>
+                <a class="purchase-pc" href="./checkout.html">Purchase</a>
+            </div>
+            <div class="product" data-price="619" data-processor="Intel" data-ram="16GB" data-graphics="NVIDIA" data-disk="SSD">
+                <img src="./pictures/laptop5.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">Gaming Laptop Intel® Core™ i7-14700KF, 16GB RAM, GeForce RTX 2060 Ti, 1TB SSD</p>
+                    <p class="product-price">2,445 $</p>
+                </div>
+                <a class="purchase-pc" href="./checkout.html">Purchase</a>
+            </div>
+            <div class="product" data-price="619" data-processor="AMD" data-ram="32GB" data-graphics="NVIDIA" data-disk="SSD M.2">
+                <img src="./pictures/laptop6.jpg" alt="Product Image" onclick="openModal(this)">
+                <div class="product-details">
+                    <p class="product-title">Gaming Laptop AMD Ryzen™ 9 7950X3D, 32GB RAM, GeForce GTX 1650 - 6GB, 1TB SDD</p>
+                    <p class="product-price">3,000 $</p>
+                </div>
+                <a class="purchase-pc" href="./checkout.html">Purchase</a>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            var captionText = document.getElementById("caption");
+
+            modal.style.display = "block";
+            modalImg.src = element.src;
+            captionText.innerHTML = element.nextElementSibling.querySelector('.product-title').innerText;
+        }
+
+        function closeModal(a) {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script src="gamingpc.js"></script>
+
+
+</body>
+</html>

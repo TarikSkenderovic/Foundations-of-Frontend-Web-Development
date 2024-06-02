@@ -1,0 +1,83 @@
+.modal{
+
+
+}
+
+
+
+#myModal{
+
+}
+
+.close{
+    background-color: rgb(168, 57, 57);
+    position: absolute;
+    padding: 30px;
+    font-size: 3rem;
+    top: 20px;
+    left: 500px;
+}
+
+
+.modal-content{
+    background-color: gray;
+}
+
+
+#modalImage{
+    position: absolute;
+    top: 0;
+    left: 40vw;
+    width: 450px;
+
+}
+
+
+#caption{
+    background-color: rgb(34, 34, 34);
+    width: 100px;
+    color: white;
+    font-size: 2.2rem;
+
+}
+
+
+/* modal.css */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}

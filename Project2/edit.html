@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Delete Entity</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Entity Manager</div>
+            <ul class="nav-options">
+                <li><a href="Project2.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="about-us">
+        <div class="section-break">Entities</div>
+        <div id="entities"></div>
+    </section>
+
+    <script>
+     
+        const data = {
+            entities: [
+                { id: 1, name: "Entity1", value: "Value1" },
+                { id: 2, name: "Entity2", value: "Value2" }
+            ]
+        };
+
+        
+        function displayEntities() {
+            const entitiesDiv = document.getElementById('entities');
+            entitiesDiv.innerHTML = '';
+
+            data.entities.forEach(entity => {
+                const entityDiv = document.createElement('div');
+                entityDiv.className = 'entity';
+                entityDiv.innerHTML = `
+                    <strong>${entity.name}</strong>: ${entity.value}
+                    <button onclick="editEntity(${entity.id})">Edit</button>
+                    <button onclick="deleteEntity(${entity.id})">Delete</button>
+                `;
+                entitiesDiv.appendChild(entityDiv);
+            });
+        }
+
+       
+        function editEntity(entityId) {
+            const entity = data.entities.find(e => e.id === entityId);
+            if (entity) {
+                const newName = prompt("Enter new name:", entity.name);
+                const newValue = prompt("Enter new value:", entity.value);
+                if (newName !== null) entity.name = newName;
+                if (newValue !== null) entity.value = newValue;
+                alert("Edit successful.");
+                displayEntities();
+            } else {
+                alert("Edit failed. Entity not found.");
+            }
+        }
+
+        // Function to delete an entity
+        function deleteEntity(entityId) {
+            const entityIndex = data.entities.findIndex(e => e.id === entityId);
+            if (entityIndex > -1) {
+                if (confirm("Are you sure you want to delete this entity?")) {
+                    data.entities.splice(entityIndex, 1);
+                    alert("Delete successful.");
+                    displayEntities();
+                }
+            } else {
+                alert("Delete failed. Entity not found.");
+            }
+        }
+
+      
+        displayEntities();
+    </script>
+</body>
+</html>
