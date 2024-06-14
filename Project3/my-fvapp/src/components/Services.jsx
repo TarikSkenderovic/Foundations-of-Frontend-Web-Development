@@ -1,12 +1,12 @@
 import React from 'react';
-import img01 from '../images/img01.jpg';
 import img02 from '../images/s1.png';
-import img03 from '../images/img03.jpg'; 
-import img04 from '../images/img04.jpg'; 
-import img05 from '../images/img05.jpg'; 
-import img06 from '../images/img06.jpg'; 
-import img07 from '../images/img07.png'; 
-import img08 from '../images/img08.png'; 
+import img02 from '../images/s1.png';
+import img02 from '../images/s1.png'; 
+import img02 from '../images/s1.png'; 
+import img02 from '../images/s1.png'; 
+import img02 from '../images/s1.png'; 
+import img02 from '../images/s1.png'; 
+import img02 from '../images/s1.png'; 
 
 function Services() {
     return (
